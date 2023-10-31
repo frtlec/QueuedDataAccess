@@ -1,0 +1,82 @@
+﻿@page "/fetchdata"
+@inject HttpClient Http
+
+<PageTitle>Hesap hareketleri</PageTitle>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>T Date</th>
+            <th>V Date</th>
+            <th>Tutar</th>
+            <th>Balance</th>
+        </tr>
+    </thead>
+    <tbody class="@(_isVisible ? "fade-in show" : "fade-in")">
+        @foreach (var item in list)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.TransactionDate.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                <td>@item.ValorDate.ToShortDateString()</td>
+                <td>@item.Total</td>
+                <td>@item.Balance</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<style>
+    .fade-in {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out; /* Animasyon için geçiş süresi ve efekti */
+    }
+
+        .fade-in.show {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+</style>
+@code {
+    private bool _isVisible = false;
+    private List<ActivityModel> list = new();
+    private System.Timers.Timer timer;
+    protected override async Task OnInitializedAsync()
+    {
+
+        await FetchDatax();
+
+        // Timer'ı başlatmak için
+        timer = new System.Timers.Timer();
+        timer.Elapsed += async (sender, e) => await FetchDatax(); // Her çalıştığında FetchData metodu çalışacak
+        timer.Interval = 10000; // Her 30 saniyede bir çalışacak (milisaniye cinsinden)
+        timer.Enabled = true;
+    }
+    private async Task FetchDatax()
+    {
+
+        var response= await Http.GetFromJsonAsync<List<ActivityModel>>("https://localhost:7161/api/Activity");
+        _isVisible = false;
+        StateHasChanged();
+        await Task.Delay(400);
+        _isVisible = true;
+        list = response.Take(1000).ToList();
+        StateHasChanged(); // Değişikliklerin sayfaya yansımasını sağlamak için
+    }
+
+    public class ActivityModel
+    {
+        public int Id { get; set; }
+        public DateTime TransactionDate { get; set; }
+        public DateTime ValorDate { get; set; }
+        public string? BaseIban { get; set; }
+        public string? TargetIban { get; set; }
+        public string Description { get; set; }
+        public string? BankCode { get; set; }
+        public decimal Total { get; set; }
+        public decimal Balance { get; set; }
+        public string Receipt { get; set; }
+        public string RefNo { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
+    }
+}

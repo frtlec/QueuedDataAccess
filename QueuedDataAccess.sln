@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueuedDataAccess.API", "QueuedDataAccess.API\QueuedDataAccess.API.csproj", "{32DD1FD7-1951-4A4C-9F54-283BC102338E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueuedDataAccess.Client", "QueuedDataAccess.Client\QueuedDataAccess.Client.csproj", "{354D13B1-A4AA-4A65-97E0-3D4AD8DA68FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueuedDataAccess.Data", "QueuedDataAccess.Data\QueuedDataAccess.Data.csproj", "{75E4C6FB-4D59-447D-BC5A-31B847902C58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueuedDataAccess.Quartz", "QueuedDataAccess.Quartz\QueuedDataAccess.Quartz.csproj", "{7D1A9C98-1779-40E3-9C76-6F46F42B31DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeBankService", "FakeBankService\FakeBankService.csproj", "{6EDDBEFE-D15F-4C00-8D63-D6784D1233B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueuedDataAccess.SPA", "QueuedDataAccess.SPA\QueuedDataAccess.SPA.csproj", "{E86D9A0E-1F7A-40C3-A5A3-BBA538B20E37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32DD1FD7-1951-4A4C-9F54-283BC102338E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32DD1FD7-1951-4A4C-9F54-283BC102338E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32DD1FD7-1951-4A4C-9F54-283BC102338E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32DD1FD7-1951-4A4C-9F54-283BC102338E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{354D13B1-A4AA-4A65-97E0-3D4AD8DA68FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{354D13B1-A4AA-4A65-97E0-3D4AD8DA68FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{354D13B1-A4AA-4A65-97E0-3D4AD8DA68FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{354D13B1-A4AA-4A65-97E0-3D4AD8DA68FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75E4C6FB-4D59-447D-BC5A-31B847902C58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75E4C6FB-4D59-447D-BC5A-31B847902C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75E4C6FB-4D59-447D-BC5A-31B847902C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75E4C6FB-4D59-447D-BC5A-31B847902C58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D1A9C98-1779-40E3-9C76-6F46F42B31DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D1A9C98-1779-40E3-9C76-6F46F42B31DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D1A9C98-1779-40E3-9C76-6F46F42B31DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D1A9C98-1779-40E3-9C76-6F46F42B31DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EDDBEFE-D15F-4C00-8D63-D6784D1233B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EDDBEFE-D15F-4C00-8D63-D6784D1233B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EDDBEFE-D15F-4C00-8D63-D6784D1233B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EDDBEFE-D15F-4C00-8D63-D6784D1233B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E86D9A0E-1F7A-40C3-A5A3-BBA538B20E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E86D9A0E-1F7A-40C3-A5A3-BBA538B20E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E86D9A0E-1F7A-40C3-A5A3-BBA538B20E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E86D9A0E-1F7A-40C3-A5A3-BBA538B20E37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4F1FA98-F730-4FC9-A8C5-7CF55B65385E}
+	EndGlobalSection
+EndGlobal
